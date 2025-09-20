@@ -1,11 +1,8 @@
-export class Transacao {
-    // tipoTransacao: string = "";
-    // valorTransacao: number = 0;
+import { nanoid } from "nanoid";
 
-    // constructor(tipo: TipoTransacao, valor: number){
-    //     this.tipoTransacao = tipo;
-    //     this.valorTransacao = valor;
-    // }
+export class Transacao {
+    readonly id = nanoid();
+    readonly data = new Date();
 
     constructor(
         public readonly tipo: TipoTransacao, 
